@@ -2,7 +2,7 @@
   "name": "cucumber-step",
   "main": "./lib/cucumber-step",
   "version": "0.2.1",
-  "description": "Jump to step from feature [forked]",
+  "description": "Jump to step from feature \n [forked from https://github.com/gaslight/atom-cucumber-step] - merged issue #16, #17",
   "activationCommands": {
     "atom-workspace": "cucumber-step:jump-to-step"
   },
