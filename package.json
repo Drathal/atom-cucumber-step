@@ -1,7 +1,7 @@
 {
   "name": "cucumber-step-jump",
   "main": "./lib/cucumber-step-jump",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Jump to step from feature \n [forked from https://github.com/gaslight/atom-cucumber-step] - merged issue #16, #17",
   "activationCommands": {
     "atom-workspace": "cucumber-step:jump-to-step"
