@@ -1,7 +1,7 @@
 module.exports =
   class StepJumper
 
-    constructor: (@line) ->
+    constructor: (@line) ->      
       matchData = @line.match(/^\s*(\w+)\s+(.*)/)
       if matchData
         @firstWord = matchData[1]
@@ -11,8 +11,7 @@ module.exports =
       new RegExp "(Given|When|Then|And)\(.*\)"
 
     checkMatch: ({filePath, matches} ) ->
-      for match in matches
-        console.log("Searching in #{filePath}")
+      for match in matches        
         regex = @extractRegex(match.matchText)
         continue unless regex
         try

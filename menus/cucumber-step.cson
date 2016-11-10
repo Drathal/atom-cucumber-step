@@ -5,7 +5,7 @@
     'submenu': [
       'label': 'Cucumber Step'
       'submenu': [
-        { 'label': 'Jump to step', 'command': 'cucumber-step:jump-to-step' }
+        { 'label': 'Jump to step', 'command': 'cucumber-step-jump:jump-to-step' }
       ]
     ]
   }

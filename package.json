@@ -1,10 +1,10 @@
 {
   "name": "cucumber-step-jump",
-  "main": "./lib/cucumber-step-jump",
+  "main": "./lib/cucumber-step",
   "version": "0.4.0",
   "description": "Jump to step from feature \n [forked from https://github.com/gaslight/atom-cucumber-step] - merged issue #16, #17",
   "activationCommands": {
-    "atom-workspace": "cucumber-step:jump-to-step"
+    "atom-workspace": "cucumber-step-jump:jump-to-step"
   },
   "repository": "https://github.com/Drathal/atom-cucumber-step",
   "license": "MIT",

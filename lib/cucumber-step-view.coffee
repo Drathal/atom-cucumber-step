@@ -7,7 +7,7 @@ class CucumberStepView extends View
       @div "The CucumberStep package is Alive! It's ALIVE!", class: "message"
 
   initialize: (serializeState) ->
-    atom.workspaceView.command "cucumber-step:toggle", => @toggle()
+    atom.workspaceView.command "cucumber-step-jump:toggle", => @toggle()
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
@@ -17,7 +17,6 @@ class CucumberStepView extends View
     @detach()
 
   toggle: ->
-    console.log "CucumberStepView was toggled!"
     if @hasParent()
       @detach()
     else
