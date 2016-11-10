@@ -5,12 +5,12 @@ module.exports =
       matchData = @line.match(/^\s*(\w+)\s+(.*)/)
       if matchData
         @firstWord = matchData[1]
-        @restOfLine = matchData[2]
+        @restOfLine = matchData[2].replace /^\s+|\s+$/g, ""
 
     stepTypeRegex: ->
       new RegExp "(Given|When|Then|And)\(.*\)"
 
-    checkMatch: ({filePath, matches}) ->
+    checkMatch: ({filePath, matches} ) ->
       for match in matches
         console.log("Searching in #{filePath}")
         regex = @extractRegex(match.matchText)
@@ -24,7 +24,7 @@ module.exports =
           return [filePath, match.range[0][0]]
 
     extractRegex: (matchText) ->
-      regexMatch = matchText.match(/\/([^/]*)/)
+      regexMatch = matchText.match(/\([^/]*\/(.*)\/.*\)/)
       if regexMatch
         return regexMatch[1]
       patternMatch = matchText.match(/("|')(.*)\1/)
